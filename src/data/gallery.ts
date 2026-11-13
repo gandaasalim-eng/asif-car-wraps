@@ -1,0 +1,145 @@
+import type { GalleryItem } from "@/types";
+
+const sample =
+  "Sample photography. This is a stock automotive image for presentation, not a documented Asif Car Wraps project.";
+
+export const galleryItems: GalleryItem[] = [
+  {
+    src: "/images/services/wrapping.jpg",
+    alt: "Sample photograph of a blue sports coupe in daylight",
+    title: "Blue sports coupe",
+    category: "wraps",
+    caption: sample,
+    aspect: "tall",
+  },
+  {
+    src: "/images/hero/slide-1.jpg",
+    alt: "Sample photograph of a Porsche sports car from a front three-quarter angle",
+    title: "Porsche three-quarter",
+    category: "wraps",
+    caption: sample,
+    aspect: "wide",
+  },
+  {
+    src: "/images/gallery/bmw.jpg",
+    alt: "Sample photograph of a dark BMW fascia",
+    title: "BMW fascia",
+    category: "wraps",
+    caption: sample,
+    aspect: "square",
+  },
+  {
+    src: "/images/gallery/red.jpg",
+    alt: "Sample photograph of a red coupe in profile",
+    title: "Red coupe profile",
+    category: "wraps",
+    caption: sample,
+    aspect: "tall",
+  },
+  {
+    src: "/images/services/ppf.jpg",
+    alt: "Sample photograph of a silver luxury car with clean paint",
+    title: "Clean silver paint",
+    category: "ppf",
+    caption: sample,
+    aspect: "wide",
+  },
+  {
+    src: "/images/backgrounds/cinematic.jpg",
+    alt: "Sample photograph of a light Porsche on an open road",
+    title: "Porsche on the road",
+    category: "ppf",
+    caption: sample,
+    aspect: "wide",
+  },
+  {
+    src: "/images/gallery/white.jpg",
+    alt: "Sample photograph of a white sports car front end",
+    title: "White front end",
+    category: "ppf",
+    caption: sample,
+    aspect: "tall",
+  },
+  {
+    src: "/images/gallery/silver.jpg",
+    alt: "Sample photograph of a silver performance car",
+    title: "Silver performance car",
+    category: "ppf",
+    caption: sample,
+    aspect: "square",
+  },
+  {
+    src: "/images/services/custom.jpg",
+    alt: "Sample photograph of a red mid-engine sports car",
+    title: "Red mid-engine car",
+    category: "custom",
+    caption: sample,
+    aspect: "tall",
+  },
+  {
+    src: "/images/hero/slide-3.jpg",
+    alt: "Sample photograph of a low sports car at night",
+    title: "Night sports car",
+    category: "custom",
+    caption: sample,
+    aspect: "wide",
+  },
+  {
+    src: "/images/gallery/mustang.jpg",
+    alt: "Sample photograph of a red classic-modern coupe",
+    title: "Red statement coupe",
+    category: "custom",
+    caption: sample,
+    aspect: "square",
+  },
+  {
+    src: "/images/gallery/yellow.jpg",
+    alt: "Sample photograph of a yellow sports car",
+    title: "Yellow sports car",
+    category: "custom",
+    caption: sample,
+    aspect: "tall",
+  },
+  {
+    src: "/images/services/mods.jpg",
+    alt: "Sample photograph of a black BMW in profile",
+    title: "Black BMW profile",
+    category: "mods",
+    caption: sample,
+    aspect: "wide",
+  },
+  {
+    src: "/images/hero/slide-4.jpg",
+    alt: "Sample photograph of a dark Mercedes performance car",
+    title: "Dark performance sedan",
+    category: "mods",
+    caption: sample,
+    aspect: "tall",
+  },
+  {
+    src: "/images/gallery/workshop.jpg",
+    alt: "Sample photograph of a car inside a studio or garage bay",
+    title: "Studio bay",
+    category: "mods",
+    caption: sample,
+    aspect: "wide",
+  },
+  {
+    src: "/images/gallery/audi.jpg",
+    alt: "Sample photograph of a premium Audi-style sedan",
+    title: "Premium sedan",
+    category: "mods",
+    caption: sample,
+    aspect: "square",
+  },
+];
+
+export const galleryFilters = [
+  { id: "all", label: "All Projects" },
+  { id: "wraps", label: "Car Wraps" },
+  { id: "ppf", label: "PPF" },
+  { id: "custom", label: "Custom Wraps" },
+  { id: "mods", label: "Modifications" },
+] as const;
+
+export type GalleryFilter = (typeof galleryFilters)[number]["id"];

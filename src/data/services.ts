@@ -1,3 +1,4 @@
+
 import type { InfoCard } from "@/types";
 import { whatsappMessages } from "@/lib/whatsapp";
 
@@ -300,12 +301,122 @@ export const services: ServiceContent[] = [
       "Are prices listed on the website?",
     ],
   },
+
+  // NEW SERVICE: CAR SEATS POSHISH
+  {
+    slug: "car-seats-poshish",
+    eyebrow: "Premium interior styling",
+    title: "Car Seats Poshish",
+    description:
+      "Transform your vehicle's interior with premium seat upholstery, elegant finishes, and personalized designs.",
+    image: "/images/services/seats.jpg",
+    imageAlt:
+      "Black and brown custom car seat upholstery with premium interior styling",
+    metaTitle: "Car Seats Poshish & Custom Upholstery",
+    metaDescription:
+      "Explore Car Seats Poshish at Asif Car Wraps in Lahore. Custom seat upholstery, leather-look finishes, dual-tone designs, and premium interior styling.",
+    whatsappMessage:
+      "Hello Asif Car Wraps! I would like to enquire about Car Seats Poshish. Please share the available designs, materials, and quotation.",
+    cardText:
+      "Refresh your car interior with custom seat upholstery, premium textures, elegant colors, and personalized finishing.",
+    introTitle: "Upgrade your driving experience",
+    intro: [
+      "Car Seats Poshish focuses on improving the appearance and comfort of your vehicle's interior through customized seat upholstery and carefully selected materials.",
+      "Whether you prefer a classic black interior, a stylish dual-tone combination, or a distinctive stitching pattern, the available options can be discussed according to your vehicle model.",
+    ],
+    benefits: [
+      {
+        title: "Premium interior appearance",
+        text: "Give your vehicle a refined cabin appearance with elegant upholstery designs.",
+      },
+      {
+        title: "Custom color combinations",
+        text: "Discuss black, brown, beige, red, and dual-tone color schemes.",
+      },
+      {
+        title: "Comfort-focused materials",
+        text: "Explore materials and fitting options suitable for everyday driving.",
+      },
+      {
+        title: "Personalized styling",
+        text: "Choose suitable patterns, stitching, and finishes according to your preferences.",
+      },
+    ],
+    optionsTitle: "Available upholstery styles",
+    optionsIntro:
+      "Explore different seat upholstery designs. Materials, colors, fitting, and availability are confirmed during consultation.",
+    options: [
+      {
+        title: "Leather-look upholstery",
+        text: "A luxurious leather-style finish for a sophisticated cabin appearance.",
+      },
+      {
+        title: "Dual-tone seat designs",
+        text: "Combine complementary colors to create a distinctive interior.",
+      },
+      {
+        title: "Custom stitching",
+        text: "Discuss decorative stitching patterns and personalized seat detailing.",
+      },
+      {
+        title: "Full seat upholstery",
+        text: "Explore matching upholstery designs for front and rear seating.",
+      },
+      {
+        title: "Custom seat covers",
+        text: "Discuss fitted seat cover options based on your vehicle model.",
+      },
+      {
+        title: "Interior color coordination",
+        text: "Select upholstery colors that complement your dashboard and interior trim.",
+      },
+    ],
+    detailTitle: "Designed around your vehicle",
+    detail: [
+      "Every vehicle has a different seat shape, interior layout, and upholstery requirement. Designs and fitting options are reviewed according to your car.",
+      "Share your vehicle model, existing seat photographs, and preferred color combinations to discuss suitable upholstery options.",
+      "Material availability, pricing, installation requirements, and final designs are confirmed during consultation.",
+    ],
+    steps: [
+      {
+        title: "Consultation",
+        text: "Share your vehicle details, seat photographs, and preferred upholstery style.",
+      },
+      {
+        title: "Design selection",
+        text: "Discuss suitable colors, materials, stitching patterns, and available finishes.",
+      },
+      {
+        title: "Professional fitting",
+        text: "The selected upholstery is fitted according to the vehicle's seat design and safety requirements.",
+      },
+      {
+        title: "Final inspection",
+        text: "The finished seats are checked for appearance, fit, and comfort.",
+      },
+    ],
+    careTitle: "Upholstery maintenance tips",
+    care: [
+      "Clean seats regularly using products recommended for the selected upholstery material.",
+      "Avoid harsh chemicals, abrasive brushes, and unsuitable cleaning solutions.",
+      "Remove spills promptly to reduce staining.",
+      "Protect upholstery from prolonged exposure to direct sunlight and excessive heat.",
+      "Follow the cleaning and maintenance guidance provided for your selected material.",
+    ],
+    faqQuestions: [
+      "How can I get a quotation?",
+      "How do I book an appointment?",
+      "Are prices listed on the website?",
+    ],
+  },
 ];
 
 export function getService(slug: string) {
   const service = services.find((item) => item.slug === slug);
+
   if (!service) {
     throw new Error(`Unknown service: ${slug}`);
   }
+
   return service;
 }

@@ -1,4 +1,4 @@
-
+﻿
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -204,7 +204,7 @@ export function Welcome() {
                     aria-hidden="true"
                     className="text-lg transition-transform duration-300 group-hover:translate-x-1"
                   >
-                    ↗
+                    Γåù
                   </span>
                 </Link>
               </div>
@@ -338,8 +338,9 @@ export function ServiceCards() {
             </h2>
 
             <p className="max-w-md text-base leading-7 text-white/60">
-              From premium car wraps to advanced paint protection,
-              discover professional styling solutions designed
+              From premium car wraps and paint protection
+              to custom car seat upholstery, discover
+              professional styling solutions designed
               to elevate your vehicle.
             </p>
           </div>
@@ -422,6 +423,7 @@ export function ServiceCards() {
     </section>
   );
 }
+
 
 /* ==========================================
    WHY CHOOSE US

@@ -65,9 +65,7 @@ function NavAnchor({
         className={cn(
           "absolute bottom-0 left-0 h-[2px] bg-pink",
           "transition-all duration-300",
-          active
-            ? "w-full"
-            : "w-0 group-hover:w-full"
+          active ? "w-full" : "w-0 group-hover:w-full"
         )}
       />
     </Link>
@@ -113,14 +111,14 @@ export function Navbar() {
           "mx-auto flex max-w-[1600px] items-center justify-between",
           "gap-4 px-5 sm:px-8 lg:px-10",
           "transition-all duration-500",
-          scrolled ? "min-h-[70px]" : "min-h-[82px]"
+          scrolled ? "min-h-[80px]" : "min-h-[92px]"
         )}
       >
-        {/* LUXURY BRAND */}
+        {/* PREMIUM BRAND LOGO AND TAGLINE */}
         <Link
           href="/"
           aria-label="Asif Car Wraps home"
-          className="group flex shrink-0 flex-col justify-center"
+          className="group flex min-w-0 shrink-0 flex-col justify-center"
         >
           <span className="font-display text-[29px] leading-none tracking-[0.04em] text-white transition-colors duration-300 group-hover:text-white/85">
             ASIF<span className="text-pink">.</span>
@@ -128,6 +126,14 @@ export function Navbar() {
 
           <span className="mt-1 font-grotesk text-[9px] font-medium uppercase tracking-[0.3em] text-white/60">
             CAR WRAPS
+          </span>
+
+          {/* NEW BUSINESS TAGLINE */}
+          <span className="mt-2 max-w-[160px] font-grotesk text-[7px] font-semibold uppercase leading-[1.5] tracking-[0.1em] text-white/65 sm:max-w-[200px] sm:text-[8px]">
+            BEST CAR WRAPPING
+            <span className="block text-pink">
+              &amp; DECORATION CENTER
+            </span>
           </span>
         </Link>
 
@@ -202,13 +208,16 @@ export function Navbar() {
             aria-label={`Call ${business.displayPhone}`}
             className="hidden items-center gap-2 font-grotesk text-xs font-medium text-white/75 transition-colors hover:text-white 2xl:inline-flex"
           >
-            <Phone className="h-4 w-4 text-pink" aria-hidden="true" />
+            <Phone
+              className="h-4 w-4 text-pink"
+              aria-hidden="true"
+            />
             <span className="whitespace-nowrap">
               {business.displayPhone}
             </span>
           </a>
 
-          {/* WHATSAPP BUTTON */}
+          {/* WHATSAPP BOOKING BUTTON */}
           <a
             href={bookingUrl}
             target="_blank"
@@ -224,7 +233,9 @@ export function Navbar() {
             )}
           >
             <span className="sm:hidden">Book</span>
-            <span className="hidden sm:inline">Book Consultation</span>
+            <span className="hidden sm:inline">
+              Book Consultation
+            </span>
             <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           </a>
 
@@ -255,10 +266,13 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            transition={{
+              duration: 0.3,
+              ease: "easeInOut",
+            }}
             className="overflow-hidden border-t border-white/10 bg-[#08090d]/98 backdrop-blur-2xl xl:hidden"
           >
-            <div className="max-h-[calc(100svh-82px)] overflow-y-auto px-5 py-6 sm:px-8">
+            <div className="max-h-[calc(100svh-92px)] overflow-y-auto px-5 py-6 sm:px-8">
               <div className="mb-5 flex items-center gap-3">
                 <span className="h-px w-8 bg-pink" />
                 <p className="font-grotesk text-[10px] font-semibold uppercase tracking-[0.25em] text-white/50">
@@ -282,7 +296,8 @@ export function Navbar() {
                         "border-b border-white/10 py-3",
                         "font-grotesk text-[17px] font-medium",
                         "text-white/70 transition-colors hover:text-white",
-                        isActive(pathname, item.href) && "text-pink"
+                        isActive(pathname, item.href) &&
+                          "text-pink"
                       )}
                     >
                       <span className="flex items-center gap-4">

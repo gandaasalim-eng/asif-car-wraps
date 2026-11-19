@@ -122,11 +122,11 @@ export function Navbar() {
             className="group flex min-w-0 shrink-0 items-center gap-3"
           >
           <img
-            src="/images/asif-logo.svg"
-            alt="Asif Car Wraps car logo"
+            src="/images/asif-original-logo.png"
+            alt="Asif Car Wraps premium automotive logo"
             width={76}
             height={52}
-            className="h-12 w-[70px] shrink-0 object-contain sm:h-14 sm:w-[76px]"
+            className="h-14 w-[90px] shrink-0 object-contain sm:h-16 sm:w-[105px]"
           />
             <span className="font-display text-[29px] leading-none tracking-[0.04em] text-white transition-colors duration-300 group-hover:text-white/85">
               ASIF<span className="text-pink">.</span>
@@ -376,5 +376,6 @@ export function Navbar() {
     </header>
   );
 }
+
 
 

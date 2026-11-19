@@ -1,4 +1,4 @@
-
+﻿
 "use client";
 
 import { useEffect, useState } from "react";
@@ -109,38 +109,56 @@ export function Navbar() {
       <div
         className={cn(
           "mx-auto flex max-w-[1600px] items-center justify-between",
-          "gap-4 px-5 sm:px-8 lg:px-10",
+          "gap-3 px-5 sm:px-8 lg:px-10",
           "transition-all duration-500",
           scrolled ? "min-h-[80px]" : "min-h-[92px]"
         )}
       >
-        {/* PREMIUM BRAND LOGO AND TAGLINE */}
-        <Link
-          href="/"
-          aria-label="Asif Car Wraps home"
-          className="group flex min-w-0 shrink-0 flex-col justify-center"
-        >
-          <span className="font-display text-[29px] leading-none tracking-[0.04em] text-white transition-colors duration-300 group-hover:text-white/85">
-            ASIF<span className="text-pink">.</span>
-          </span>
-
-          <span className="mt-1 font-grotesk text-[9px] font-medium uppercase tracking-[0.3em] text-white/60">
-            CAR WRAPS
-          </span>
-
-          {/* NEW BUSINESS TAGLINE */}
-          <span className="mt-2 max-w-[160px] font-grotesk text-[7px] font-semibold uppercase leading-[1.5] tracking-[0.1em] text-white/65 sm:max-w-[200px] sm:text-[8px]">
-            BEST CAR WRAPPING
-            <span className="block text-pink">
-              &amp; DECORATION CENTER
+        {/* BRAND AND NATIONWIDE SERVICE MESSAGE */}
+        <div className="flex min-w-0 shrink-0 items-center gap-4 lg:gap-5">
+          <Link
+            href="/"
+            aria-label="Asif Car Wraps home"
+            className="group flex min-w-0 shrink-0 items-center gap-3"
+          >
+            <span className="font-display text-[29px] leading-none tracking-[0.04em] text-white transition-colors duration-300 group-hover:text-white/85">
+              ASIF<span className="text-pink">.</span>
             </span>
-          </span>
-        </Link>
+
+            <span className="mt-1 font-grotesk text-[9px] font-medium uppercase tracking-[0.3em] text-white/60">
+              CAR WRAPS
+            </span>
+
+            {/* EXISTING BUSINESS TAGLINE */}
+            <span className="mt-2 max-w-[160px] font-grotesk text-[7px] font-semibold uppercase leading-[1.5] tracking-[0.1em] text-white/65 sm:max-w-[200px] sm:text-[8px]">
+              BEST CAR WRAPPING
+              <span className="block text-pink">
+                &amp; DECORATION CENTER
+              </span>
+            </span>
+          </Link>
+
+          {/* NATIONWIDE DOORSTEP SERVICE */}
+          <div
+            className="hidden h-11 w-px shrink-0 bg-white/20 lg:block"
+            aria-hidden="true"
+          />
+
+          <div className="hidden min-w-0 flex-col justify-center lg:flex">
+            <span className="font-grotesk text-[9px] font-bold uppercase leading-5 tracking-[0.1em] text-pink 2xl:text-[10px]">
+              Door-to-Door Service
+            </span>
+
+            <span className="font-grotesk text-[9px] font-medium uppercase leading-5 tracking-[0.04em] text-white/75 2xl:text-[10px]">
+              Available Across Pakistan
+            </span>
+          </div>
+        </div>
 
         {/* DESKTOP NAVIGATION */}
         <nav
           aria-label="Primary navigation"
-          className="hidden min-w-0 items-center justify-center gap-5 xl:flex 2xl:gap-7"
+          className="hidden min-w-0 items-center justify-center gap-4 xl:flex 2xl:gap-7"
         >
           {compactNav.map((item) =>
             item.href === "/services" ? (
@@ -280,6 +298,16 @@ export function Navbar() {
                 </p>
               </div>
 
+              {/* MOBILE DOORSTEP SERVICE MESSAGE */}
+              <div className="mb-5 border border-pink/20 bg-pink/5 px-4 py-3">
+                <p className="font-grotesk text-[11px] font-bold uppercase tracking-[0.12em] text-pink">
+                  Door-to-Door Service
+                </p>
+                <p className="mt-1 font-grotesk text-[11px] uppercase tracking-[0.06em] text-white/75">
+                  Available Across Pakistan
+                </p>
+              </div>
+
               <ul className="space-y-1">
                 {mobileNav.map((item, index) => (
                   <li key={item.href}>
@@ -341,3 +369,4 @@ export function Navbar() {
     </header>
   );
 }
+

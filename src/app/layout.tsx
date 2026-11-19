@@ -34,7 +34,7 @@ const siteTitle =
 
 // SEO description
 const description =
-  "Asif Car Wrap is a professional car wrapping and decoration center in Lahore, Pakistan. We specialize in premium car wrapping, Paint Protection Film (PPF), custom vinyl wraps, vehicle modifications, and automotive styling. Transform and protect your car with our professional services. Contact us today for a consultation and quotation.";
+  "Asif Car Wrap is a professional car wrapping and decoration center in Lahore, Pakistan. We specialize in premium car wrapping, Paint Protection Film (PPF), custom vinyl wraps, vehicle modifications, and automotive styling. Contact us for a consultation and quotation.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(business.siteUrl),
@@ -52,4 +52,80 @@ export const metadata: Metadata = {
     "Asif Car Wrap",
     "Asif Car Wraps",
     "Best Car Wrapping & Decoration Center",
-    "Car Wrapping Lahore
+    "Car Wrapping Lahore",
+    "Car Wrapping Pakistan",
+    "PPF Lahore",
+    "Paint Protection Film",
+    "Custom Car Wrapping",
+    "Car Modifications Lahore",
+    "Vehicle Decoration",
+    "Automotive Styling",
+  ],
+
+  openGraph: {
+    type: "website",
+    siteName: business.name,
+    title: siteTitle,
+    description,
+    locale: "en_PK",
+    url: business.siteUrl,
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description,
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#050507",
+  width: "device-width",
+  initialScale: 1,
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html
+      lang="en"
+      className={`${inter.variable} ${oswald.variable} ${space.variable} h-full antialiased`}
+    >
+      <body className="flex min-h-full flex-col bg-ink text-white">
+        <Providers>
+          <JsonLd />
+
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[80] focus:bg-pink focus:px-4 focus:py-3 focus:text-ink"
+          >
+            Skip to content
+          </a>
+
+          <CinematicBackdrop />
+
+          <Navbar />
+
+          <main
+            id="main"
+            className="relative z-10 flex-1"
+          >
+            {children}
+          </main>
+
+          <Footer />
+
+          <FloatingActions />
+        </Providers>
+      </body>
+    </html>
+  );
+}
